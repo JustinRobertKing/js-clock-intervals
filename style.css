@@ -1,7 +1,10 @@
 #clock {
+	display: flex;
+	justify-content: center;
 }
 
 #clock img {
+	position: absolute;
 }
 
 #hour {
