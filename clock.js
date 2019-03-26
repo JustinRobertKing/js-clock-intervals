@@ -1,11 +1,11 @@
-setInterval(tickSecond, 20)
-var second = 1
-var minute = 1
-var hour = 1
+setInterval(tickSecond, 1000)
+var now = new Date();
+var second = now.getSeconds();
+var minute = now.getMinutes();
+var hour = now.getHours();
 var secondHand = document.getElementById('second')
 var minuteHand = document.getElementById('minute')
 var hourHand = document.getElementById('hour')
-var now = newDate()
 
 function secondRotation(second) {
 	return (second / 60) * 360
@@ -17,9 +17,7 @@ function hourRotation(hour) {
 	return (hour / 12) * 360
 }
 
-
 function tickSecond() {
-	console.log("booo")
 	var degreeSecond = secondRotation(second)
 	second++
 	if (second === 61) {
@@ -30,7 +28,6 @@ function tickSecond() {
 }
 
 function tickMinute() {
-	console.log("you")
 	var degreeMinute = minuteRotation(minute)
 	minute++
 	if (minute === 61) {
@@ -41,7 +38,6 @@ function tickMinute() {
 }
 
 function tickHour() {
-	console.log("whore")
 	var degreeHour = hourRotation(hour)
 	hour++
 	if (hour === 12) {
@@ -50,3 +46,5 @@ function tickHour() {
 	hourHand.style.transform = "rotate(" + degreeHour + "deg)"
 }
 tickSecond()
+tickMinute()
+tickHour()
