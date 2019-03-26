@@ -40,7 +40,7 @@ function tickMinute() {
 function tickHour() {
 	var degreeHour = hourRotation(hour)
 	hour++
-	if (hour === 12) {
+	if (hour === 13) {
 		hour = 1
 	} 
 	hourHand.style.transform = "rotate(" + degreeHour + "deg)"
